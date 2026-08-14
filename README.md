@@ -13,10 +13,6 @@
   <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License">
 </p>
 
-<p align="center">
-  <a href="https://github.com/Josh-scripts/WeeCare">GitHub Repository</a>
-</p>
-
 ---
 
 ## Table of Contents
@@ -912,6 +908,7 @@ Therefore, WeeCare should not be used as the sole basis for emergency medical de
 
 | Member | Role |
 |---|---|
+| **Praseetha S**| Mentor |
 | **Joshua S** | Project Lead |
 | **Kamalesh N** | Team Member |
 | **Pranav A** | Team Member |
