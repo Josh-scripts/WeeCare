@@ -1,0 +1,35 @@
+# Wi-Fi CSI AI Model Training Pipeline Configuration
+
+dataset:
+  dir: "d:\\WeeCare\\Dataset\\CSI_Dataset"
+  sequence_length: 100
+  step_size: 20
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  normalize: true
+  num_subcarriers: 64
+  augmentation: true
+
+model:
+  name: "csi_net_1d"        # Options: "csi_net_1d" (Fast Lightweight), "csi_transformer" (Deep Attention)
+  in_channels: 64
+  hidden_dim: 128
+  num_classes: 4
+  dropout: 0.2
+
+training:
+  epochs: 25
+  batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  use_amp: true             # Automatic Mixed Precision for RTX GPU acceleration
+  enable_tf32: true         # Use TF32 on NVIDIA GPUs for 3x speedup
+  early_stopping_patience: 5
+  clip_grad_norm: 1.0
+  output_dir: "./checkpoints"
+
+hardware:
+  device: "auto"            # Automatically uses NVIDIA RTX 5060 GPU if available
+  num_workers: 4
+  pin_memory: true
